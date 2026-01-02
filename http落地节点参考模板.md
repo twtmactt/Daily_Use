@@ -107,3 +107,4 @@
     }
 }
 ```
+    - {name: pure, type: http, server: 服务器地址, port: 10798, username: 用户名, password: 密码, tls: true, sni: 同服务器地址, skip-cert-verify: false, dialer-proxy: 前置代理}
