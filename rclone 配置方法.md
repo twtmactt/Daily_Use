@@ -19,8 +19,6 @@ mkdir /root/GoogleDrive
 rclone mount codesofun:share /data/GoogleDrive --allow-other --allow-non-empty --vfs-cache-mode writes &
 或者
 rclone mount DriveName:Folder LocalFolder --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000
-webdav挂载示例
-rclone mount codesofun:/share /data/GoogleDrive --allow-other --allow-non-empty --vfs-cache-mode writes &
 ```
 
 DriveName为初始化配置填的name，Folder为Google Drive里的文件夹，LocalFolder为VPS上的本地文件夹。  
@@ -59,3 +57,4 @@ rclone copy -v  ode5:/movies/Movies 115:/115/Movies --transfers=3  --progress
 rclone copy -v '/root/hdd/xunlei' '115:/115/Tvshows'  --transfers=3  --progress
 ```
 其中 "ode5:/" "115:/115"的这种格式是我只用rclone添加了储存，并未挂载到vps上，如果已挂载，可能会有所区别，[参考文章](https://p3terx.com/archives/rclone-advanced-user-manual-common-command-parameters.html)
+
