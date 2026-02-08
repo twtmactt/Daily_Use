@@ -53,6 +53,18 @@ systemctl enable rclone
 ```
 ### 修改了挂载命令需要先
 ```systemctl daemon-reload```
+### 挂载夸克参考命令
+```rclone mount quark: /mnt/quark \
+  --allow-other \
+  --vfs-cache-mode full \
+  --vfs-cache-max-size 50G \
+  --vfs-read-chunk-size 64M \
+  --vfs-read-chunk-size-limit 512M \
+  --buffer-size 128M \
+  --dir-cache-time 72h \
+  --poll-interval 1m \
+  --daemon```
+
 
 ### Rclone复制/移动文件参考命令  
 ```
@@ -60,5 +72,6 @@ rclone copy -v  ode5:/movies/Movies 115:/115/Movies --transfers=3  --progress
 rclone copy -v '/root/hdd/xunlei' '115:/115/Tvshows'  --transfers=3  --progress
 ```
 其中 "ode5:/" "115:/115"的这种格式是我只用rclone添加了储存，并未挂载到vps上，如果已挂载，可能会有所区别，[参考文章](https://p3terx.com/archives/rclone-advanced-user-manual-common-command-parameters.html)
+
 
 
