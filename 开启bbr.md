@@ -36,7 +36,7 @@ echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 ```
 
-执行完这几条指令后，再用 sysctl net.ipv4.tcp_congestion_control 验证一下，看到返回结果是：net.ipv4.tcp_congestion_control = bbr
+执行完这几条指令后，再用 `sysctl net.ipv4.tcp_congestion_control` 验证一下，看到返回结果是：net.ipv4.tcp_congestion_control = bbr
 
 
 Debian9/10开启bbr  
