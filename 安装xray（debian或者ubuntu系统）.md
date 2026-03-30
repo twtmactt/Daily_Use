@@ -6,14 +6,10 @@ apt upgrade
 apt install curl
 apt install nano
 ```
-安裝執行檔和 .dat 資料檔  
-```bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)```  
-//只更新 .dat 資料檔  
-```bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)```  
 
 修改配置文件  
 ```  
-nano /usr/local/etc/v2ray/config.json
+nano /usr/local/etc/xray/config.json
 ```
 将以下内容粘贴并修改相应部分  
 ```  
@@ -74,14 +70,11 @@ nano /usr/local/etc/v2ray/config.json
 ```
 启用v2ray
 ```
-systemctl enable v2ray
-systemctl start v2ray
+systemctl enable xray
+systemctl start xray
 ```
 
-移除  
-```
-bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
-```
+
 开启端口
 ```
 apt install firewalld
